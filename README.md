@@ -65,12 +65,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      istio: ingressgateway
-  url: oci://your-registry/shopify-csp:1.0
-  # Istio 会自动在镜像的 /etc/wasm/ 目录下查找 .wasm 文件
-  # 或者可以显式指定路径：
-  # url: oci://your-registry/shopify-csp:1.0/etc/wasm/shopify_filter.wasm
+      gateway.networking.k8s.io/gateway-name: istio-gateway
+  url: oci://yourdockerhub/library/shopify-csp:3.0
+  imagePullSecret: tiaoling
   priority: 100
 ```
 
+#### 查看日志
+```
+kubectl logs istio-gateway-istio-65b47bd449-qd5l9 -n istio-system -c istio-proxy
+```
 
