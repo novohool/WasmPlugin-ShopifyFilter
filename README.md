@@ -67,7 +67,7 @@ spec:
     matchLabels:
       gateway.networking.k8s.io/gateway-name: istio-gateway
   url: oci://yourdockerhub/library/shopify-csp:3.0
-  imagePullSecret: tiaoling
+  imagePullSecret: xxx
   priority: 100
 ```
 
