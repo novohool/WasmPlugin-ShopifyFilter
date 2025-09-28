@@ -1,0 +1,18 @@
+# 忽略开发文件
+src/
+Cargo.toml
+Cargo.lock
+README.md
+docker-compose.yaml
+envoy.yaml
+.git/
+.gitignore
+
+# 忽略构建产物（除了我们需要的 WASM 文件）
+target/
+!target/wasm32-wasip1/release/shopify_filter.wasm
+
+# 忽略其他不需要的文件
+*.md
+*.yaml
+*.yml
