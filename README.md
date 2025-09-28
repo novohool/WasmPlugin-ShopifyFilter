@@ -52,7 +52,7 @@ Expected Envoy logs:
 ## 打包:
 #### 步骤 2：打包oci
 ```
-docker build -t oci://your-registry/shopify-csp:1.0 .
+docker build -t your-registry/shopify-csp:1.0 .
 ```
 
 #### 步骤 3：创建 WasmPlugin 资源
