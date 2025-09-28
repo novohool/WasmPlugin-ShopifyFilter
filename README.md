@@ -76,3 +76,16 @@ spec:
 kubectl logs istio-gateway-istio-65b47bd449-qd5l9 -n istio-system -c istio-proxy
 ```
 
+#### 调试
+```
+# curl -I -H  "Host: httpbin.example.com" http://xxxx/?shop=112
+HTTP/1.1 200 OK
+server: istio-envoy
+date: Sun, 28 Sep 2025 11:15:42 GMT
+content-type: text/html; charset=utf-8
+content-length: 9593
+access-control-allow-origin: *
+access-control-allow-credentials: true
+x-envoy-upstream-service-time: 5
+content-security-policy: block-all-mixed-content; frame-ancestors https://admin.shopify.com https://112
+```
