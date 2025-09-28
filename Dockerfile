@@ -2,7 +2,7 @@
 FROM gcr.io/distroless/static-debian12:nonroot
 
 # 复制 WASM 文件到 Istio 期望的位置
-COPY target/wasm32-wasip1/release/shopify_filter.wasm /etc/wasm/shopify_filter.wasm
+COPY target/wasm32-wasip1/release/shopify_filter.wasm /plugin.wasm
 
 # 设置文件权限
 USER nonroot
